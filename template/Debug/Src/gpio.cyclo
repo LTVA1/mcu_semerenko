@@ -1,0 +1,2 @@
+../Src/gpio.c:3:6:init_portc	1
+../Src/gpio.c:10:6:blinkled	1
