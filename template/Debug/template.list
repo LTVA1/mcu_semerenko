@@ -156,7 +156,7 @@ int main(void)
 
 	while (1)
 	{
-		for(int i = 0; i < 50000; i++) {}
+		for(int i = 0; i < 60000; i++) {}
  800016a:	2300      	movs	r3, #0
  800016c:	607b      	str	r3, [r7, #4]
  800016e:	e002      	b.n	8000176 <main+0x16>
@@ -169,9 +169,9 @@ int main(void)
  800017c:	ddf8      	ble.n	8000170 <main+0x10>
 		blinkled();
  800017e:	f7ff ffe1 	bl	8000144 <blinkled>
-		for(int i = 0; i < 50000; i++) {}
+		for(int i = 0; i < 60000; i++) {}
  8000182:	e7f2      	b.n	800016a <main+0xa>
- 8000184:	0000c34f 	.word	0x0000c34f
+ 8000184:	0000ea5f 	.word	0x0000ea5f
 
 08000188 <Reset_Handler>:
 
