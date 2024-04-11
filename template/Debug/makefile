@@ -59,8 +59,8 @@ all: main-build
 main-build: template.elf secondary-outputs
 
 # Tool invocations
-template.elf template.map: $(OBJS) $(USER_OBJS) C:\Users\Georg\STM32CubeIDE\workspace_semerenko\mcu_semerenko\template\STM32F051R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "template.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\Georg\STM32CubeIDE\workspace_semerenko\mcu_semerenko\template\STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="template.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+template.elf template.map: $(OBJS) $(USER_OBJS) C:\Users\Georg\Documents\GitHub\mcu_semerenko\template\STM32F051R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "template.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\Georg\Documents\GitHub\mcu_semerenko\template\STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="template.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
