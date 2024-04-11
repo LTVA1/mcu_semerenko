@@ -7,7 +7,7 @@ int main(void)
 
 	while (1)
 	{
-		for(int i = 0; i < 500000; i++) {}
+		for(int i = 0; i < 600000; i++) {}
 		blinkled();
 	}
 }
