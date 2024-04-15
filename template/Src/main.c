@@ -7,6 +7,14 @@ void TIM6_DAC_IRQHandler()
 	blinkled();
 }
 
+void gpio_porta_init()
+{
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+
+	GPIOA->MODER |= GPIO_MODER_MODER8_1;
+	GPIOA->AFR[1] &= ~GPIO_AFRH_AFRH0; //alt function
+}
+
 void Set48MHz()
 {
 	RCC->CR &= ~RCC_CR_PLLON;
@@ -29,6 +37,7 @@ int main(void)
 {
 	Set48MHz();
 	init_portc();
+	gpio_porta_init();
 	init_tim6();
 	start_tim6();
 
