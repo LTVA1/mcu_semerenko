@@ -1,0 +1,9 @@
+core_cm0.h:629:22:NVIC_EnableIRQ	16	static
+core_cm0.h:688:22:NVIC_SetPriority	24	static
+main.c:33:6:TIM6_DAC_IRQHandler	8	static
+main.c:39:6:Set48MHz	8	static
+main.c:57:6:init_portc	8	static
+main.c:64:6:blinkled	8	static
+main.c:69:6:init_tim6	8	static
+main.c:80:6:start_tim6	8	static
+main.c:85:5:main	16	static
